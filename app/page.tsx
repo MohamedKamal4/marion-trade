@@ -7,7 +7,6 @@ import MasterTabs from "./components/tabs/tabs";
 import { brandsTabs, ProductsTabs, StoresTabs } from "./constens/data";
 import ContactUs from "./components/contact/contact";
 import Faq from "./components/faq/faq";
-import poster from "./assets/image/poster.jpg";
 
 
 export default function MainHome() {
@@ -37,7 +36,7 @@ export default function MainHome() {
                 return (
                   <div key={layout.tap} className="min-h-dvh w-full relative">
                     <video src={layout.background} autoPlay
-                      poster={poster}
+                      poster='/poster.jpg'
                       muted
                       loop
                       playsInline
