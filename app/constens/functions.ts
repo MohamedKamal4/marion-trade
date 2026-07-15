@@ -2,6 +2,7 @@ import { toast } from "sonner";
 import { HandleNavTapsOnClickProps, sendDatatypes } from "./types";
 import emailjs from "@emailjs/browser";
 
+
 export const handleNavTapsOnClick = ({
   page,
   setpageEnabled,
@@ -24,6 +25,8 @@ export const handleNavTapsOnClick = ({
 };
 
 export const sendData = async ({formData , setFormData} : sendDatatypes ) => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
+
     try {
         await emailjs.send(
             process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -48,8 +51,17 @@ export const sendData = async ({formData , setFormData} : sendDatatypes ) => {
             phone : '' , 
             message : ''
         });
-    } catch (error) {
-        console.error(error);
+    } catch (error: any) {
+        console.log(error);
+
+        if (error.text) {
+            console.log(error.text);
+        }
+
+        if (error.status) {
+            console.log(error.status);
+        }
+
         toast.error("Failed to send message!");
     }
 }

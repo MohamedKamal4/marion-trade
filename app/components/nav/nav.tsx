@@ -89,6 +89,7 @@ export default function Nav({ setPage }: NavProps) {
                                 {link.page === "home" ? 
                                     <Link 
                                         href="/"
+                                        rel="preload"
                                         onClick={() => {
                                             handleNavTapsOnClick({
                                                 page: link.page,
@@ -114,6 +115,7 @@ export default function Nav({ setPage }: NavProps) {
                                             })
                                             setIsOpen(false)
                                         }}
+                                        rel="preload"
                                         variant="link"
                                         className={`cursor-pointer px-6 h-10 w-full rounded-none flex justify-start text-white ${
                                             pageEnabled === link.page ? "bg-red-900" : ""

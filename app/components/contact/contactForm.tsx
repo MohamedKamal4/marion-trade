@@ -84,16 +84,9 @@ export default function ContactForm() {
                 <Button
                     type="button"
                     onClick={() => {
-                        console.log(formData)
                         sendData({formData , setFormData})
                     }}
-                    disabled={
-                        !formData.name ||
-                        !formData.companyName ||
-                        !formData.email ||
-                        !formData.phone ||
-                        !formData.message
-                    }
+                    disabled={ !formData.name || !formData.companyName || !formData.email || !formData.phone || !formData.message }
                     className="h-14 w-full rounded-xl bg-black text-white cursor-pointer hover:bg-gray-900 transition"
                 >
                     Send

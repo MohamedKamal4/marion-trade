@@ -56,24 +56,6 @@ export const aboutContent = [
 
 
 export const brandsContent: Record<string, BrandContent> = {
-    geely: {
-        mainImage: geely,
-        mainTitle: 'Welcome to Marion Trade, the Official Authorized Distributor of Geely, where innovation meets trust and excellence. Through our commitment to delivering world-class automotive solutions, we proudly provide genuine Geely vehicles, original spare parts, and comprehensive after-sales services that meet the highest international standards. At Refela Motors, our dedicated automotive showrooms offer a premium selection of Geely models alongside a diverse range of vehicles from leading global brands across different categories.',
-        slide: [
-            {
-                image: geely1,
-                description: 'Geely Coolray – Dynamic Performance, Intelligent Technology & Modern SUV Design',
-            },
-            {
-                image: geely2,
-                description: 'Geely Starray – Premium Comfort, Advanced Innovation & Powerful Driving Experience',
-            },
-            {
-                image: geely3,
-                description: 'Geely Emgrand – Elegant Design, Exceptional Comfort & Reliable Everyday Performance',
-            },
-        ],
-    },
     spida: {
         mainImage: spida,
         mainTitle: 'SPIDA is a trusted home appliance brand dedicated to providing reliable, innovative, and stylish kitchen solutions for modern households. Designed with a focus on performance, durability, and ease of use, SPIDA products help make everyday cooking and food preparation faster, easier, and more enjoyable. From small kitchen appliances to practical home essentials, SPIDA combines quality craftsmanship with contemporary design to meet the needs of every home.',
@@ -397,12 +379,6 @@ export const productsContent: Record<string, ProductsContent> = {
 
 export const brandsTabs:activeTabTypes[]= [
     {
-        key : 'geely' ,
-        tabTitle: 'Geely' , 
-        content: <MasterContent keyOfContent={'geely'} /> ,
-        background: './geely.mp4'
-    },
-    {
         key : 'spida' ,
         tabTitle: 'Spida' , 
         content: <MasterContent keyOfContent={'spida'} /> ,
@@ -545,3 +521,5 @@ export const faqData = [
         "You can contact Marion Trade through our contact form, email, or customer service team for product inquiries, wholesale requests, partnerships, dealership opportunities, or general support.",
     },
 ];
+
+

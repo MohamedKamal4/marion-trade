@@ -11,7 +11,7 @@ export default function MasterTabs({setBrandsBackground, tabs , pageTitle} : mas
 
     return(
         <section className="absolute z-5 top-0 left-0 w-full min-h-screen lg:h-250 px-10 md:px-0">
-            <div className="container overflow-hidden m-auto flex flex-col text-white size-full py-25 md:py-30">
+            <div className="container m-auto flex flex-col text-white h-full w-full py-25 md:py-30 overflow-auto">
                 <ul data-aos='fade-up' data-aos-delay='500' className=" h-[10%] flex items-center">
                     <h2 className=" pe-5 md:pe-10 text-sm md:text-3xl flex">{pageTitle}</h2>
                     {tabs.map((tab) => {
@@ -24,7 +24,7 @@ export default function MasterTabs({setBrandsBackground, tabs , pageTitle} : mas
                         )
                     })}
                 </ul>
-                <div data-aos='zoom-in' className={` h-[80%] bg-red-900/20 backdrop-blur-sm md:overflow-hidden overflow-scroll`}>
+                <div data-aos='zoom-in' className={` h-[90%] bg-red-900/20 backdrop-blur-sm`}>
                     {activeTap.content}
                 </div>
             </div>

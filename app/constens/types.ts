@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { Dispatch, ReactNode } from "react";
 
 export interface HandleNavTapsOnClickProps {
     page: string;

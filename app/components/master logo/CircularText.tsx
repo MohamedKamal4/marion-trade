@@ -1,6 +1,8 @@
 'use client';
 import React, { useEffect } from 'react';
 import { motion, useAnimation, useMotionValue, MotionValue, Transition } from 'motion/react';
+import Image from 'next/image';
+import marionlogo from '../../assets/image/marion logo.png'
 interface CircularTextProps {
   text: string;
   spinDuration?: number;
@@ -91,32 +93,41 @@ const CircularText: React.FC<CircularTextProps> = ({
   };
 
   return (
-    <motion.div
-      className={`m-0 mx-auto rounded-full w-20 h-20 relative font-black text-white text-center cursor-pointer origin-center ${className}`}
-      style={{ rotate: rotation }}
-      initial={{ rotate: 0 }}
-      animate={controls}
-      onMouseEnter={handleHoverStart}
-      onMouseLeave={handleHoverEnd}
-    >
-      {letters.map((letter, i) => {
-        const rotationDeg = (360 / letters.length) * i;
-        const factor = Math.PI / letters.length;
-        const x = factor * i;
-        const y = factor * i;
-        const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
+    <div>
+      <motion.div
+        className={`m-0 mx-auto rounded-full w-20 h-20 relative font-black text-white text-center cursor-pointer origin-center ${className}`}
+        style={{ rotate: rotation }}
+        initial={{ rotate: 0 }}
+        animate={controls}
+        onMouseEnter={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
+      >
+        {letters.map((letter, i) => {
+          const rotationDeg = (360 / letters.length) * i;
+          const factor = Math.PI / letters.length;
+          const x = factor * i;
+          const y = factor * i;
+          const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
 
-        return (
-          <span
-            key={i}
-            className="absolute inline-block inset-0 text-sm font-normal transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
-            style={{ transform, WebkitTransform: transform }}
-          >
-            {letter}
-          </span>
-        );
-      })}
-    </motion.div>
+          return (
+            <span
+              key={i}
+              className="absolute inline-block inset-0 text-sm font-normal transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
+              style={{ transform, WebkitTransform: transform }}
+            >
+              {letter}
+            </span>
+          );
+        })}
+      </motion.div>
+        <Image
+          src={marionlogo}
+          alt=''
+          width={40}
+          height={40}
+          className='absolute top-4 left-5'
+        />
+    </div>
   );
 };
 
