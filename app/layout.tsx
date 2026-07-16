@@ -33,7 +33,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${smoochSans.className} h-full antialiased`}
     >
-      <body className=" bg-[#0e0f10] flex flex-col overflow-hidden">
+      <body className=" bg-[#0e0f10] flex flex-col">
         <Aos />
         {children}
         <Toaster />

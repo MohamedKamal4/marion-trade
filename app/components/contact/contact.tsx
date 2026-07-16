@@ -4,25 +4,25 @@ import ContactForm from "./contactForm";
 export default function ContactUs(){
     return(
         <>
-            <div data-aos='zoom-in' className='hidden absolute z-5 top-0 left-0 w-full h-250 lg:flex justify-center items-center'>
-                <div className="container overflow-hidden m-auto flex flex-col text-white size-full py-50">
+            <div data-aos='zoom-in' className='hidden absolute z-5 top-0 left-0 w-full lg:flex flex items-center justify-center h-full py-40 justify-center items-center'>
+                <div className="container overflow-hidden m-auto flex flex-col text-white size-full">
                     <h2 className="text-3xl pe-10">- Contact Us</h2>
                     <div className=" h-full flex bg-red-900/20 backdrop-blur-sm p-15">
-                        <div className="w-[50%] h-full flex flex-col justify-between">
-                            <div data-aos='fade-right' data-aos-delay='500' className="w-full pe-10 pb-10">
+                        <div className="w-[50%] h-full space-y-10 flex flex-col justify-between">
+                            <div data-aos='fade-right' data-aos-delay='500' className="w-full pe-10">
                                 <h3 className=" text-7xl">Marion Trading Company</h3>
                                 <p className="text-2xl"><span className="font-bold">Number Phone :</span> 0224555266</p>
                                 <p className="text-2xl"><span className="font-bold">E - mail :</span> mariontrade@yahoo.com</p>
                             </div>
                             <span className="h-px w-full bg-white"></span>
-                            <div data-aos='zoom-in' data-aos-delay='500' className="w-full h-full pe-20 pt-10">
+                            <div data-aos='zoom-in' data-aos-delay='500' className="w-full h-full pe-20">
                                 <div className="overflow-hidden w-full h-full rounded-3xl border border-white/10 shadow-2xl">
                                     <StoreMap locationTitle='contact' />
                                 </div>
                             </div>
                         </div>
-                        <div className="h-full w-1/2 ps-10 pb-10 border-s border-px border-white">
-                            <h3 data-aos='fade-left' data-aos-delay='500' className=" text-5xl pb-5">Your Massage</h3>
+                        <div className="h-full w-1/2 ps-10 pb-10 border-s border-px border-white space-y-20">
+                            <h3 data-aos='fade-left' data-aos-delay='500' className=" text-5xl">Your Massage</h3>
                             <div data-aos='fade-up' data-aos-delay='500'>
                                 <ContactForm />
                             </div>

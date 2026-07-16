@@ -8,7 +8,7 @@ import {
 export default function Faq(){
     return(
         <>
-            <div data-aos='zoom-in' className='hidden absolute z-5 top-0 left-0 w-full h-250 lg:flex justify-center items-center'>
+            <div data-aos='zoom-in' className='hidden absolute z-5 top-0 left-0 w-full h-full lg:flex justify-center items-center'>
                 <div className=" container h-2/3 w-full text-white flex-col gap-10">
                     <h2 className="text-3xl pe-10">- FAQ</h2>
                     <div className=" h-full bg-red-900/20 backdrop-blur-sm p-15">

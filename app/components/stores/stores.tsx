@@ -6,7 +6,7 @@ export default function Stores({storesData , keyOfContent}: storesProps){
 
     return(
         <>
-            <div className="lg:flex hidden size-full">
+            <div className="lg:flex hidden  ">
                 <div data-aos='fade-right' className="w-[70%] border-e border-px border-white flex flex-col gap-10">
                     <h3 data-aos='fade-right' data-aos-delay='500' className="text-xl pe-10">{storesContent[keyOfContent].mainTitle}</h3>
                     <span className=" w-full h-px bg-white"></span>
