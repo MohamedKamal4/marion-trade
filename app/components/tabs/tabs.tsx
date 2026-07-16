@@ -11,7 +11,7 @@ export default function MasterTabs({setBrandsBackground, tabs , pageTitle} : mas
 
     return(
         <section className="absolute z-5 top-0 left-0 w-full min-h-screen lg:h-250 lg:px-0">
-            <div className="container m-auto flex flex-col gap-10 lg:gap-0 text-white h-full w-full py-25 lg:py-30 overflow-auto">
+            <div className="container m-auto flex flex-col gap-10 lg:gap-0 text-white h-full w-full py-25 lg:py-30">
                 <ul data-aos='fade-up' data-aos-delay='500' className="ps-5 lg:ps-0 lg:h-[10%] gap-10 lg:gap-0 flex-wrap flex items-center">
                     <h2 className=" pe-5 lg:pe-10 text-3xl w-full lg:w-fit lg:flex">{pageTitle}</h2>
                     {tabs.map((tab) => {

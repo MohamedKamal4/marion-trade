@@ -31,7 +31,7 @@ export default function MainHome() {
   return (
       <>
           <Nav setPage={setPage} />
-          <section className="text-primary-foreground relative md:overflow-hidden">
+          <section className="text-primary-foreground relative">
             <div className="absolute w-full h-1/2 bg-gradient-to-t from-[#0e0f10] to-transparent bottom-0 left-0"></div>
             <div className="absolute h-full w-1/2 bg-gradient-to-r from-[#0e0f10] to-transparent bottom-0 left-0"></div>
             <div className="absolute w-full h-1/2 bg-gradient-to-b from-[#0e0f10] to-transparent top-0 left-0"></div>
@@ -43,7 +43,7 @@ export default function MainHome() {
                 loop
                 playsInline
                 preload="metadata" 
-                className="absolute inset-0 w-full h-full object-cover -z-10 md:flex hidden " 
+                className="absolute inset-0 w-full h-full object-cover -z-10 md:flex hidden md:overflow-hidden overflow-scroll " 
               />
               <Image
                 src={phoneBg}
