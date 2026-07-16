@@ -43,7 +43,7 @@ export default function MainHome() {
                 loop
                 playsInline
                 preload="metadata" 
-                className="absolute inset-0 w-full h-full object-cover -z-10 md:flex hidden md:overflow-hidden overflow-scroll " 
+                className="absolute inset-0 w-full h-full object-cover -z-10 md:flex hidden md:overflow-hidden overflow-auto " 
               />
               <Image
                 src={phoneBg}
