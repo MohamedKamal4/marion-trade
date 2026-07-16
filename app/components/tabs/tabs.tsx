@@ -10,7 +10,7 @@ export default function MasterTabs({setBrandsBackground, tabs , pageTitle} : mas
     },[activeTap])
 
     return(
-        <div className="absolute z-5 top-0 left-0 w-full min-h-screen flex justify-center items-center lg:px-0">
+        <div className="absolute z-5 top-0 left-0 w-full min-h-screen flex justify-center items-center lg:px-0 md:py-0 py-30">
             {/* py-25 lg:py-30 */}
             <div className="container m-auto flex flex-col gap-10 lg:gap-0 text-white h-full w-full ">
                 <ul data-aos='fade-up' data-aos-delay='500' className="ps-5 lg:ps-0 lg:h-[10%] gap-10 lg:gap-0 flex-wrap flex items-center">
