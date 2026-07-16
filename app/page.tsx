@@ -9,6 +9,7 @@ import ContactUs from "./components/contact/contact";
 import Faq from "./components/faq/faq";
 import Image from "next/image";
 import phoneBg from './assets/image/phoneBg.jpg'
+import { IoMdArrowDropup } from "react-icons/io";
 
 
 export default function MainHome() {
@@ -30,7 +31,7 @@ export default function MainHome() {
   return (
       <>
           <Nav setPage={setPage} />
-          <section className="text-primary-foreground relative overflow-hidden">
+          <section className="text-primary-foreground relative md:overflow-hidden">
             <div className="absolute w-full h-1/2 bg-gradient-to-t from-[#0e0f10] to-transparent bottom-0 left-0"></div>
             <div className="absolute h-full w-1/2 bg-gradient-to-r from-[#0e0f10] to-transparent bottom-0 left-0"></div>
             <div className="absolute w-full h-1/2 bg-gradient-to-b from-[#0e0f10] to-transparent top-0 left-0"></div>
@@ -48,11 +49,22 @@ export default function MainHome() {
                 src={phoneBg}
                 alt=""
                 fill
-                className="md:hidden absolute inset-0 -z-10"
+                sizes="100vw"
+                priority
+                className="lg:hidden absolute inset-0 -z-10"
               />
               {currentLayout?.component}
             </div>
           </section>
+          <div className=" lg:hidden fixed bottom-5 md:w-15 md:h-15 w-10 h-10 rounded-full right-5 bg-red-900 z-50">
+              <button onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              }} className=" size-full flex justify-center items-center text-3xl text-white"><IoMdArrowDropup/></button>
+          </div>
       </>
   )
 }

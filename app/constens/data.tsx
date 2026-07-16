@@ -410,16 +410,16 @@ export const StoresTabs:activeTabTypes[]= [
 
 export const ProductsTabs:activeTabTypes[]= [
     {
-        key : 'cars' ,
-        tabTitle: 'Cars' , 
-        content: <MasterContent keyOfContent={'cars'} /> ,
-        background: './car.mp4'
-    },
-    {
         key : 'appliances' ,
         tabTitle: 'Appliances' , 
         content: <MasterContent keyOfContent={'appliances'} />,
         background: './homeAppliances.mp4'
+    },
+    {
+        key : 'cars' ,
+        tabTitle: 'Cars' , 
+        content: <MasterContent keyOfContent={'cars'} /> ,
+        background: './car.mp4'
     }
 ]
 
@@ -522,4 +522,34 @@ export const faqData = [
     },
 ];
 
+ export const refelaStores = [
+    {
+        title : 'Brands',
+        list : storesContent.stores.brands
+    },
+    {
+        title : 'Gategories',
+        list : storesContent.stores.gategories
+    },
+    {
+        title : 'Services',
+        list : storesContent.stores.services
+    },
+]
+
+
+export const refelaMotors = [
+    {
+        title : 'Brands',
+        list : storesContent.motors.brands
+    },
+    {
+        title : 'Gategories',
+        list : storesContent.motors.gategories
+    },
+    {
+        title : 'Services',
+        list : storesContent.motors.services
+    },
+]
 

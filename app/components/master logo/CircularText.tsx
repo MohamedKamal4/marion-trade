@@ -125,6 +125,7 @@ const CircularText: React.FC<CircularTextProps> = ({
           alt=''
           width={40}
           height={40}
+          priority
           className='absolute top-4 left-5'
         />
     </div>

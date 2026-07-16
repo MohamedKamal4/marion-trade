@@ -87,7 +87,7 @@ export default function ContactForm() {
                         sendData({formData , setFormData})
                     }}
                     disabled={ !formData.name || !formData.companyName || !formData.email || !formData.phone || !formData.message }
-                    className="h-14 w-full rounded-xl bg-black text-white cursor-pointer hover:bg-gray-900 transition"
+                    className="h-14 w-full rounded-xl bg-red-900 lg:bg-black text-white cursor-pointer hover:bg-gray-900 transition"
                 >
                     Send
                 </Button>

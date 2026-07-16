@@ -83,7 +83,7 @@ export default function Nav({ setPage }: NavProps) {
                         <div className={`${isOpen ? 'rotate-45 absolute top-5 left-0' : ''}  transition-all duration-300 w-10 h-px bg-white`}></div>
                         <div className={`${isOpen ? '-rotate-45 absolute top-5 left-0' : ''}  transition-all duration-300 w-10 h-px bg-white`}></div>
                     </button>
-                    <ul className={`transition-all duration-300 fixed z-20 top-0 h-screen w-full bg-black flex flex-col py-30 ${isOpen ? 'right-0' : '-right-[100%]'}`}>
+                    <ul className={`transition-all duration-300 fixed z-20 top-0 h-screen w-full bg-black/20 backdrop-blur-sm flex flex-col py-30 ${isOpen ? 'right-0' : '-right-[100%]'}`}>
                         {navLinks.map((link) => (
                             <li key={link.page} className="h-full">
                                 {link.page === "home" ? 

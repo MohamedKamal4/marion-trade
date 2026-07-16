@@ -14,6 +14,7 @@ export default function Brands({keyOfContent}: brandsProps){
                             src={brandsContent[keyOfContent]?.mainImage}
                             alt=""
                             fill
+                            sizes="140px"
                         />
                     </div>
                     <h3 className="text-2xl">{brandsContent[keyOfContent]?.mainTitle}</h3>
@@ -30,6 +31,8 @@ export default function Brands({keyOfContent}: brandsProps){
                                                     src={item.image}
                                                     alt=""
                                                     fill
+                                                    sizes="320px"
+                                                    priority
                                                 />
                                             </div>
                                             <p className="text-center">{item.description}</p>
@@ -43,60 +46,59 @@ export default function Brands({keyOfContent}: brandsProps){
                     </Carousel>
                 </div>
             </div>
-            {/* tablits */}
-            <div className="lg:hidden md:flex items-center hidden size-full py-10 ">
-                <div data-aos='zoom-in' className="lg:w-1/2 flex flex-col justify-between gap-10 lg:h-100 size-full">
-                    <Carousel>
-                        <CarouselContent>
-                            {brandsContent[keyOfContent]?.slide.map((item, i) => {
-                                return(
-                                    <CarouselItem key={i}>
-                                        <div className="size-full flex flex-col justify-center items-center">
-                                            <div className="relative w-80 h-80">
-                                                <Image 
-                                                    src={item.image}
-                                                    alt=""
-                                                    fill
-                                                />
-                                            </div>
-                                            <p className="text-center lg:text-lg text-sm">{item.description}</p>
-                                        </div>
-                                    </CarouselItem>
-                                )
-                            })}
-                        </CarouselContent>
-                        <CarouselPrevious className='cursor-pointer ms-20' />
-                        <CarouselNext className='cursor-pointer me-20' />
-                    </Carousel>
-                    <h3 className=" text-sm w-full text-center">{brandsContent[keyOfContent]?.mainTitle}</h3>
-                </div>
-            </div>
             {/* phones */}
-            <div className="md:hidden w-full h-full">
-                <div data-aos='zoom-in' className=" flex flex-col justify-center gap-5 lg:h-100 size-full">
-                    <Carousel>
-                        <CarouselContent>
-                            {brandsContent[keyOfContent]?.slide.map((item, i) => {
-                                return(
-                                    <CarouselItem key={i}>
-                                        <div className="size-full flex flex-col justify-center items-center">
-                                            <div className="relative w-40 h-40">
-                                                <Image 
-                                                    src={item.image}
-                                                    alt=""
-                                                    fill
-                                                />
-                                            </div>
-                                            <p className="text-center px-10 text-xl">{item.description}</p>
-                                        </div>
-                                    </CarouselItem>
-                                )
-                            })}
-                        </CarouselContent>
-                        <CarouselPrevious className='cursor-pointer ms-20' />
-                        <CarouselNext className='cursor-pointer me-20' />
-                    </Carousel>
-                    <h3 className="text-3xl w-full p-5">{brandsContent[keyOfContent]?.mainTitle}</h3>
+            <div className="lg:hidden w-full h-full space-y-10 p-5">
+                <div className=" space-y-5 flex flex-col justify-center lg:h-100 size-full">
+                    <div className="flex items-center">
+                        <div className="flex-1 w-full h-px bg-white"></div>
+                        <h2 className="px-2">Spida</h2>
+                        <div className="flex-5 w-full h-px bg-white"></div>
+                    </div>
+                    <div data-aos='fade-right' data-aos-delay='1000' className="w-full flex gap-2">
+                        {brandsContent.spida.slide.map((item, i) => {
+                            return(
+                                <div key={i} className="w-30 h-30 flex flex-col justify-start items-center">
+                                    <div className="relative w-20 h-20">
+                                        <Image 
+                                            src={item.image}
+                                            alt=""
+                                            fill
+                                            sizes="80px"
+                                            priority
+                                        />
+                                    </div>
+                                    <p className="text-xs w-full text-center">{item.description}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <h3 data-aos='fade-right' data-aos-delay='1500' className="text-xl w-full">{brandsContent.spida.mainTitle}</h3>
+                </div>
+                <div className=" space-y-5 flex flex-col justify-center lg:h-100 size-full">
+                    <div className="flex items-center">
+                        <div className="flex-1 w-full h-px bg-white"></div>
+                        <h2 className="px-2">Top- Fit</h2>
+                        <div className="flex-5 w-full h-px bg-white"></div>
+                    </div>                    
+                    <div data-aos='fade-right' data-aos-delay='1000' className="w-full flex gap-2">
+                        {brandsContent.topFit.slide.map((item, i) => {
+                            return(
+                                <div key={i} className="w-30 h-30 flex flex-col justify-start items-center">
+                                    <div className="relative w-20 h-20">
+                                        <Image 
+                                            src={item.image}
+                                            alt=""
+                                            fill
+                                            sizes="80px"
+                                            priority
+                                        />
+                                    </div>
+                                    <p className=" text-xs w-full text-center">{item.description}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <h3 data-aos='fade-right' data-aos-delay='1500' className="text-xl w-full">{brandsContent.topFit.mainTitle}</h3>
                 </div>
             </div>
         </>
