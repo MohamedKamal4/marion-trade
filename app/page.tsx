@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "./components/home/home";
 import Nav from "./components/nav/nav";
 import About from "./components/about/about";
@@ -27,11 +27,15 @@ export default function MainHome() {
   ]
 
   const currentLayout = layouts.find(layout => layout.tap === page);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth",})
+  },[page])
+
 
   return (
       <>
           <Nav setPage={setPage} />
-          <section className="text-primary-foreground relative size-full">
+          <section className="text-primary-foreground relative h-dvh w-full">
             <div className="absolute w-full h-1/2 bg-gradient-to-t from-[#0e0f10] to-transparent bottom-0 left-0"></div>
             <div className="absolute h-full w-1/2 bg-gradient-to-r from-[#0e0f10] to-transparent bottom-0 left-0"></div>
             <div className="absolute w-full h-1/2 bg-gradient-to-b from-[#0e0f10] to-transparent top-0 left-0"></div>

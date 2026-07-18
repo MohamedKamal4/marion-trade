@@ -54,7 +54,7 @@ export default function Brands({keyOfContent}: brandsProps){
                         <h2 className="px-2">Spida</h2>
                         <div className="flex-5 w-full h-px bg-white"></div>
                     </div>
-                    <div data-aos='fade-right' data-aos-delay='1000' className="w-full flex gap-2">
+                    <div data-aos='fade-right' className="w-full flex gap-2">
                         {brandsContent.spida.slide.map((item, i) => {
                             return(
                                 <div key={i} className="w-30 h-30 flex flex-col justify-start items-center">
@@ -72,7 +72,7 @@ export default function Brands({keyOfContent}: brandsProps){
                             )
                         })}
                     </div>
-                    <h3 data-aos='fade-right' data-aos-delay='1500' className="text-xl w-full">{brandsContent.spida.mainTitle}</h3>
+                    <h3 data-aos='fade-right' className="text-xl w-full">{brandsContent.spida.mainTitle}</h3>
                 </div>
                 <div className=" space-y-5 flex flex-col justify-center lg:h-100 size-full">
                     <div className="flex items-center">
@@ -80,7 +80,7 @@ export default function Brands({keyOfContent}: brandsProps){
                         <h2 className="px-2">Top- Fit</h2>
                         <div className="flex-5 w-full h-px bg-white"></div>
                     </div>                    
-                    <div data-aos='fade-right' data-aos-delay='1000' className="w-full flex gap-2">
+                    <div data-aos='fade-right' className="w-full flex gap-2">
                         {brandsContent.topFit.slide.map((item, i) => {
                             return(
                                 <div key={i} className="w-30 h-30 flex flex-col justify-start items-center">
@@ -98,7 +98,7 @@ export default function Brands({keyOfContent}: brandsProps){
                             )
                         })}
                     </div>
-                    <h3 data-aos='fade-right' data-aos-delay='1500' className="text-xl w-full">{brandsContent.topFit.mainTitle}</h3>
+                    <h3 data-aos='fade-right' className="text-xl w-full">{brandsContent.topFit.mainTitle}</h3>
                 </div>
             </div>
         </>
